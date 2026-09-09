@@ -1,0 +1,13 @@
+{
+  "_note": "What she says on the guided tour, one line per beat. Public words: Dee sees these before they go live. Files are <beat>.mp3 in this folder, generated from these lines in her voice.",
+  "voice": "ANITA (the app's voice: Kokoro af_heart on the box, or the ElevenLabs voice Dee chooses)",
+  "beats": {
+    "talk":   "Hi. I'm ANITA. You can just talk to me, like this. I listen while I speak, so cut in whenever you like. I live on your home screen, not in a chat window.",
+    "memory": "I remember. Every conversation, every person, every plan and decision, kept in a five-layer memory. Ask me what you were worried about last Tuesday, and I'll tell you.",
+    "yours":  "And it's yours alone. My memory of you stays on your device and on hardware you control. Never in a cloud that trains on your life. One switch keeps everything on the phone.",
+    "today":  "This runs today. Five layers of memory, three ways of thinking, full two-way voice, and more than fifteen hundred tests passing on the machine that runs me. The iOS app is on its way.",
+    "robot":  "Here's why a robotics company built me first. A robot in your home will only be as good as what it knows about you. So I learn you now, on the phone you already carry. When the body is ready, I move in with everything I know. Same memory. Same voice. Same me.",
+    "others": "Other companions live in someone's cloud. I live with you. Other assistants start every day from zero. I start from yesterday.",
+    "access": "Early access opens with the iOS app. Leave your email and you'll hear from the founder himself. I'll be here."
+  }
+}

@@ -1,0 +1,134 @@
+/* ANITA landing page — the Tron build. Tokens first, then the page. */
+:root {
+  --bg: #000;
+  --ink: #eaf6f8;
+  --dim: #7f9aa3;
+  --cyan: #58e6ff;
+  --cyan-deep: #19c8ff;
+  --glass: rgba(5, 12, 18, .55);
+  --line: rgba(88, 230, 255, .18);
+  --font-display: 'Orbitron', ui-monospace, Menlo, monospace;
+  --font-body: 'Sora', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.track { height: 1000vh; }
+.stage { position: fixed; inset: 0; overflow: hidden; }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.vignette { position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.78) 100%); }
+.shade { position: absolute; left: 0; bottom: 0; width: 48vw; height: 52vh; pointer-events: none;
+  background: radial-gradient(ellipse at 18% 100%, rgba(0,0,0,.85) 0%, rgba(0,0,0,0) 70%); }
+
+/* the small labels everywhere are the display face, letter-spaced; the reading text is the body face */
+.k { font-family: var(--font-display); font-weight: 500; font-size: .68rem; letter-spacing: .28em; text-transform: uppercase; color: var(--cyan); }
+
+/* nav */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between;
+  padding: max(14px, env(safe-area-inset-top)) 22px 0; pointer-events: none; }
+.nav > * { pointer-events: auto; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 700; letter-spacing: .32em; font-size: .9rem; }
+.brand img { filter: drop-shadow(0 0 10px rgba(88,230,255,.35)); }
+.pill { display: flex; gap: 2px; padding: 4px; border-radius: 999px; background: var(--glass); border: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 10px 40px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.03); }
+.pill button { background: none; border: 0; border-radius: 999px; padding: 9px 14px; cursor: pointer; color: var(--ink);
+  font-family: var(--font-display); font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; transition: background .2s, color .2s; }
+.pill button:hover { background: rgba(88,230,255,.1); color: var(--cyan); }
+.pill button.cta { background: rgba(88,230,255,.14); color: var(--cyan); box-shadow: inset 0 0 0 1px rgba(88,230,255,.35); }
+.pill button.cta:hover { background: var(--cyan); color: #021014; }
+
+/* buttons */
+.btn { display: inline-block; border: 1px solid rgba(88,230,255,.6); background: rgba(88,230,255,.08); color: var(--cyan); border-radius: 999px;
+  padding: 12px 22px; cursor: pointer; font-family: var(--font-display); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 0 0 24px rgba(88,230,255,.12); transition: background .2s, color .2s, box-shadow .2s; }
+.btn:hover { background: var(--cyan); color: #021014; box-shadow: 0 0 34px rgba(88,230,255,.45); }
+.btn.ghost { background: none; border-color: rgba(88,230,255,.3); color: var(--ink); box-shadow: none; }
+.btn.ghost:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(88,230,255,.08); }
+.caption .scroll-hint { display: block; margin-top: .9em; }
+/* while she gives the tour */
+.tour-on .scroll-hint, .tour-on .hud { display: none; }
+.tour-badge { position: fixed; left: 50%; bottom: 3vh; transform: translateX(-50%); z-index: 20; padding: 8px 14px; border-radius: 999px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(10px); font-family: var(--font-display); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); opacity: 0; transition: opacity .3s; pointer-events: none; }
+.tour-on .tour-badge { opacity: 1; }
+
+/* captions: one column, left, over the scene */
+.caption, .facts { position: absolute; left: 6vw; bottom: 10vh; width: 30vw; max-width: 40ch; opacity: 0; pointer-events: none;
+  will-change: opacity, transform; text-shadow: 0 2px 30px rgba(0,0,0,.9); }
+.caption.is-on, .facts.is-on { pointer-events: auto; }
+.caption h1, .caption h2 { font-family: var(--font-body); font-weight: 600; font-size: clamp(1.6rem, 2.9vw, 2.8rem); line-height: 1.05; margin: .4em 0 .45em; letter-spacing: -.01em; }
+.caption p { color: var(--dim); font-size: 1rem; line-height: 1.55; margin: 0; }
+.caption .row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 1.4em; }
+.scroll-hint { font-family: var(--font-display); font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: var(--dim); }
+
+.facts ul { list-style: none; margin: 1em 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+.facts .under { color: var(--dim); font-size: .9rem; margin: 1.1em 0 0; }
+.proof { margin-top: 1em; font-family: var(--font-display); font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--dim); }
+.caption.small p { font-size: .9rem; } .caption.small a { color: var(--ink); }
+/* the memory demo: lines arrive one at a time as you scroll */
+.lines { list-style: none; margin: 1.1em 0 0; padding: 0; }
+.lines li { display: grid; grid-template-columns: 3.2em 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); opacity: 0; transform: translateX(-8px); transition: opacity .35s, transform .35s; }
+.lines li.is-on { opacity: 1; transform: none; }
+.lines b { font-family: var(--font-display); font-weight: 500; font-size: .66rem; letter-spacing: .15em; color: var(--cyan); padding-top: .25em; }
+.lines span { color: var(--ink); font-size: .95rem; line-height: 1.45; }
+.lines.plain li { grid-template-columns: 1fr; gap: 2px; }
+.lines.plain b { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; letter-spacing: 0; color: var(--ink); text-transform: none; }
+.lines.plain span { color: var(--dim); }
+.facts li { border-top: 1px solid var(--line); padding-top: 10px; }
+.facts b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--cyan); letter-spacing: .04em; }
+.facts span { color: var(--dim); font-size: .9rem; }
+
+/* the last beat: the early-access card, right side, glass */
+.access { position: absolute; right: 5vw; bottom: 9vh; width: min(460px, 42vw); padding: 26px 26px 20px; border-radius: 22px;
+  background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 30px 80px rgba(0,0,0,.6); opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .5s, transform .5s; }
+.access.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.access h2 { font-family: var(--font-body); font-weight: 600; font-size: clamp(1.5rem, 2.4vw, 2.2rem); margin: .35em 0 .4em; letter-spacing: -.01em; }
+.access p { color: var(--dim); margin: 0 0 1.1em; line-height: 1.5; font-size: .95rem; }
+.access form { display: flex; flex-wrap: wrap; gap: 8px; }
+.access input { flex: 1 1 200px; min-width: 0; background: rgba(0,0,0,.45); border: 1px solid var(--line); border-radius: 999px; color: var(--ink);
+  padding: 12px 16px; font: inherit; outline: none; }
+.access input:focus { border-color: rgba(88,230,255,.6); box-shadow: 0 0 0 3px rgba(88,230,255,.12); }
+.access .msg { font-size: .78rem; color: var(--dim); margin-top: 12px; line-height: 1.5; }
+.access .msg.is-error { color: #ff9a9a; }
+.access footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid var(--line); font-size: .72rem; color: var(--dim); }
+.access footer .links { display: flex; gap: 14px; }
+.access footer a { text-decoration: none; }
+.access footer a:hover { color: var(--cyan); }
+
+/* loading */
+.load { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; background: var(--bg); z-index: 10;
+  transition: opacity .8s; }
+.load.is-done { opacity: 0; pointer-events: none; }
+.load img { filter: drop-shadow(0 0 18px rgba(88,230,255,.35)); }
+.load-name { font-family: var(--font-display); font-weight: 700; letter-spacing: .4em; font-size: .9rem; margin-left: .4em; }
+.load-bar { width: 160px; height: 1px; background: rgba(88,230,255,.15); overflow: hidden; }
+.load-bar i { display: block; height: 100%; width: 0; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); transition: width .3s; }
+.load-text { font-family: var(--font-display); font-size: .58rem; letter-spacing: .25em; text-transform: uppercase; color: var(--dim); }
+
+/* no WebGL: the painting stands in for her */
+.still[hidden] { display: none; }
+.still { position: absolute; inset: 0; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 60%, #06121a 0%, #000 65%); }
+.still img { height: 74vh; width: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.8)); }
+.noscript { position: fixed; inset: 0; z-index: 30; background: #000; display: grid; place-content: center; text-align: center; padding: 20px; }
+.noscript img { height: 60vh; margin: 0 auto; }
+
+.hud { position: fixed; right: 1rem; bottom: 1rem; z-index: 20; font: 11px/1.4 ui-monospace, Menlo, monospace; color: var(--dim); text-align: right; }
+
+/* phones */
+@media (max-width: 700px) {
+  .brand span { display: none; }
+  .pill button { padding: 8px 9px; font-size: .54rem; letter-spacing: .1em; }
+  .caption, .facts { left: 6vw; right: 6vw; width: auto; max-width: none; bottom: max(7vh, env(safe-area-inset-bottom)); }
+  .caption h1, .caption h2 { font-size: 1.55rem; }
+  .caption p { font-size: .92rem; }
+  .shade { width: 100vw; height: 55vh; background: linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,0) 100%); }
+  .access { left: 4vw; right: 4vw; width: auto; bottom: max(4vh, env(safe-area-inset-bottom)); padding: 20px 18px 16px; border-radius: 18px; }
+  .access form { flex-direction: column; }
+  .access footer { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { .access { transition: none; } }
