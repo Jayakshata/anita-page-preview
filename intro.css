@@ -1,0 +1,55 @@
+/* The opening film. Black screen first, the film fades up out of it, then it
+   hands over to the walk. Kept in its own file so styles.css stays the walk page's. */
+
+.intro {
+  position: fixed; inset: 0; z-index: 50;
+  /* pure black, not the page's #050506 — the film's own background is #000 and
+     any difference shows as a faint rectangle around the letterboxed frame */
+  background: #000;
+  display: grid; place-items: center;
+  opacity: 1; transition: opacity .9s ease;
+}
+.intro.is-gone { opacity: 0; pointer-events: none; }
+
+/* the film itself starts invisible and comes up out of the black.
+   `contain`, never `cover`: the film is portrait, and on a wide window `cover`
+   blows it up and you see a sliver of her. The bars `contain` leaves are the
+   same black as the film's own background, so they are invisible. */
+.intro video {
+  position: absolute; inset: 0;          /* against the fixed box, not the grid row —
+                                            a grid row sizes itself to the video and
+                                            height:100% then resolves to nothing */
+  width: 100%; height: 100%; object-fit: contain; display: block;
+  background: #000;
+  opacity: 0;
+  /* we start the film part-way in, on the frame where her eyes are closed, and
+     push in past its own framing — then release back to the film's own scale as
+     it plays out. Origin sits on her face, not the middle of the frame. */
+  transform: scale(1.55);
+  transform-origin: 50% 38%;
+  transition: opacity 1.4s ease, transform 4.5s cubic-bezier(.22,.61,.36,1);
+}
+.intro.is-playing video { transform: scale(1); }
+.intro.is-playing video { opacity: 1; }
+
+/* and dips back to black at the end rather than cutting */
+.intro.is-settling video { opacity: 0; transition: opacity .6s ease; }
+
+.introskip {
+  position: absolute; right: 5vw; bottom: 5vh;
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink-dim, #9A9A94);
+  background: none; border: 1px solid var(--line, rgba(243,241,234,.12));
+  border-radius: 999px; padding: 9px 16px; cursor: pointer;
+  opacity: 0; transition: opacity .6s ease, color .3s, border-color .3s;
+}
+.intro.is-playing .introskip { opacity: 1; }
+.introskip:hover { color: var(--ink, #F3F1EA); border-color: rgba(243,241,234,.35); }
+
+/* nothing scrolls while she is arriving */
+html.intro-lock, html.intro-lock body { overflow: hidden; height: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .intro, .intro video, .introskip { transition: none; }
+}

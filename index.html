@@ -3,146 +3,237 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ANITA — personal AI with a private memory of you</title>
+<title>ANITA — she remembers what every AI forgets</title>
 <meta name="description" content="ANITA is an AI and robotics company building the brain for tomorrow's robots: personal AI with a private memory of you.">
-<meta property="og:title" content="ANITA — she remembers what every AI forgets.">
-<meta property="og:description" content="Personal AI with a private memory of you. On your phone today. The brain for tomorrow's robots.">
-<meta property="og:image" content="assets/emblem-192.png">
-<meta name="theme-color" content="#000000">
-<link rel="icon" href="assets/emblem-64.png">
+<meta name="theme-color" content="#050506">
+<meta property="og:title" content="ANITA — she remembers what every AI forgets">
+<meta property="og:description" content="Personal AI with a private memory of you. On your phone today, the brain for tomorrow's robots.">
+<meta property="og:image" content="https://aneeta.ai/assets/og.png">
+<meta property="og:url" content="https://aneeta.ai/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aneeta.ai/">
+
+<link rel="icon" href="assets/emblem-64.png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script type="importmap">
-{ "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
-} }
-</script>
+<link rel="stylesheet" href="intro.css">
 </head>
 <body>
-<!-- The page is tall only so the browser gives us a scrollbar. Everything you see is fixed and driven by how far you have scrolled.
-     Beats and copy: Planning/GROWTH/website_content_v1.md (lines marked ✔ there are the LinkedIn-approved ones). -->
-<div class="track" aria-hidden="true"></div>
 
-<header class="nav">
-  <a class="brand" href="#" data-go="0"><img src="assets/emblem-64.png" alt="" width="28" height="28"><span>ANITA</span></a>
-  <nav class="pill" aria-label="Sections">
-    <button type="button" data-go="0.20">Meet her</button>
-    <button type="button" data-go="0.40">Memory</button>
-    <button type="button" data-go="0.80">Robots</button>
-    <button type="button" class="cta" data-go="1">Early access</button>
-  </nav>
-</header>
+<!-- ====================================================== the arrival film: black, she fades up out of it, then the walk begins -->
+<div class="intro" id="intro">
+  <video id="introvid" src="assets-own/intro.mp4" playsinline muted preload="auto"></video>
+  <button class="introskip" id="introskip" type="button">skip</button>
+</div>
 
-<div class="stage">
-  <canvas id="gl" aria-hidden="true"></canvas>
-  <div class="still" id="still" hidden><img src="assets/anita-still.png" alt="ANITA"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="shade" aria-hidden="true"></div>
+<!-- ====================================================== the film: she walks a black studio, the scroll moves her -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="sharp" color-interpolation-filters="sRGB"><feConvolveMatrix order="3" kernelMatrix="0 -0.22 0 -0.22 1.88 -0.22 0 -0.22 0" preserveAlpha="true"/></filter></svg>
+<div class="film" id="film">
+  <div class="stage" id="stage">
+    <div class="floor" aria-hidden="true"></div>
+    <div class="rim" aria-hidden="true"></div>
+    <div class="key" aria-hidden="true"></div>
+    <div class="pool" aria-hidden="true"></div>
+    <div class="sweep" aria-hidden="true"></div>
 
-  <div class="load" id="load" role="status" aria-live="polite">
-    <img src="assets/emblem-192.png" alt="" width="56" height="56">
-    <div class="load-name">ANITA</div>
-    <div class="load-bar"><i id="loadbar"></i></div>
-    <div class="load-text" id="loadtext">loading her world</div>
+    <!-- stop-specific light -->
+    <div class="switch" aria-hidden="true"><i></i><b>ON THE PHONE</b></div>
+    <div class="numbers" aria-hidden="true"><b>5</b><b>3</b><b>2-way</b><b>1,500+</b></div>
+    <div class="devices" aria-hidden="true">
+      <div data-when="live"><svg viewBox="0 0 48 48"><rect x="14" y="4" width="20" height="40" rx="4"/><line x1="21" y1="39" x2="27" y2="39"/></svg><b>Phone</b><i>live</i></div>
+      <div data-when="live"><svg viewBox="0 0 48 48"><path d="M8 10h32v22H20l-8 7v-7H8z"/></svg><b>WhatsApp</b><i>live</i></div>
+      <div data-when="next"><svg viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="22" rx="2"/><path d="M4 36h40"/></svg><b>Laptop</b><i>next</i></div>
+      <div data-when="next"><svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="3"/><path d="M6 16h36M12 12h2M17 12h2"/></svg><b>Her browser</b><i>next</i></div>
+      <div data-when="next"><svg viewBox="0 0 48 48"><rect x="15" y="13" width="18" height="22" rx="5"/><path d="M19 13V6h10v7M19 35v7h10v-7"/></svg><b>Watch</b><i>next</i></div>
+      <div data-when="planned"><svg viewBox="0 0 48 48"><rect x="10" y="14" width="28" height="22" rx="3"/><circle cx="24" cy="25" r="4"/></svg><b>Home box</b><i>planned</i></div>
+      <div data-when="planned"><svg viewBox="0 0 48 48"><rect x="16" y="6" width="16" height="14" rx="4"/><rect x="12" y="22" width="24" height="18" rx="4"/><path d="M12 28H6M36 28h6M18 40v5M30 40v5"/></svg><b>The body</b><i>planned</i></div>
+    </div>
+    <div class="silhouette" aria-hidden="true"><img src="assets/anita-still.png" alt=""><span></span></div>
+
+    <canvas id="her" aria-label="ANITA, walking and talking"></canvas>
+
+    <header class="nav">
+      <a class="brand" href="#top"><img src="assets/emblem-64.png" alt="" width="26" height="26"><span>ANITA</span></a>
+      <div class="status" id="status"><span>ANITA</span> · <em id="state">ARRIVING</em>▌</div>
+      <div class="right"><button class="sound" id="sound" type="button" aria-pressed="false" aria-label="Her voice on or off"><i></i>Voice</button><a class="cta" href="#access">Get early access</a></div>
+    </header>
+
+    <!-- the stops: one panel each; the script decides which is visible -->
+    <section class="panel hero" data-stop="0">
+      <div class="k">ANITA</div>
+      <h1>She remembers what every AI forgets.</h1>
+      <p>ANITA is an AI and robotics company building the brain for tomorrow's robots: personal AI with a private memory of you.</p>
+      <div class="row"><a class="btn amber" href="#access">Get early access</a><button class="btn ghost" type="button" id="walkbtn">Walk with her</button></div>
+      <div class="hint">Scroll to walk with her</div>
+    </section>
+
+    <section class="panel" data-stop="1">
+      <div class="k">Who she is</div>
+      <h2>A personal AI. On your phone.</h2>
+      <p>She lives on your home screen, not in a chat window. Full voice, both ways: she listens while she speaks, so you can cut in mid-sentence.</p>
+    </section>
+
+    <section class="panel" data-stop="2">
+      <div class="k">Her memory of you</div>
+      <h2>Ask her what you were worried about last Tuesday.</h2>
+      <p>Every conversation, person, plan and decision, kept in a five-layer memory and brought back exactly when you need it.</p>
+      <ul class="lines">
+        <li><b>Tue</b><span>You were worried about the investor deck.</span></li>
+        <li><b>Wed</b><span>You uploaded the deck. The revenue numbers were from 2024.</span></li>
+        <li><b>Fri</b><span>Your mum's birthday is on the 15th. No gift yet.</span></li>
+        <li><b>Now</b><span>"What was I stressed about this week?" She tells you all three.</span></li>
+      </ul>
+    </section>
+
+    <section class="panel" data-stop="3">
+      <div class="k">Private by design</div>
+      <h2>Kept on hardware you own.</h2>
+      <p>The memory is yours alone. It stays on your device and on hardware you control, never in a cloud that trains on your life. One switch keeps everything on the phone.</p>
+    </section>
+
+    <section class="panel" data-stop="4">
+      <div class="k">What runs today</div>
+      <ul class="facts">
+        <li><b>5</b><span>layers of memory</span></li>
+        <li><b>3</b><span>thinking modes</span></li>
+        <li><b>Full-duplex</b><span>voice, both ways</span></li>
+        <li><b>1,500+</b><span>tests passing</span></li>
+      </ul>
+      <p>The iOS app is in development. Early access opens with it.</p>
+    </section>
+
+    <section class="panel" data-stop="5">
+      <div class="k">Why a robotics company built this first</div>
+      <h2>A robot in your home will only be as good as what it knows about you.</h2>
+      <p>We come from robotics. The hard part of a home robot is not the hands, it is knowing the people it lives with. So ANITA learns you now, on the phone you already carry. When the body is ready, she moves in with everything she knows.</p>
+    </section>
+
+    <section class="panel" data-stop="6">
+      <div class="k">Every screen you own</div>
+      <h2>One mind. Every device is a window, or a body.</h2>
+      <p>On your phone and in your WhatsApp today. Next: your laptop, your watch, and a browser of her own that books, fills in and asks, with your yes every time. Then a box at home for the whole family, and one day a body. The same memory follows you.</p>
+    </section>
+
+    <section class="panel" data-stop="7">
+      <div class="k">Not another chatbot</div>
+      <ul class="lines plain">
+        <li><b>Other companions live in someone's cloud.</b><span>ANITA lives with you.</span></li>
+        <li><b>Other assistants start every day from zero.</b><span>ANITA starts from yesterday.</span></li>
+        <li><b>Other AIs are apps.</b><span>ANITA is a brain that will one day have a body.</span></li>
+      </ul>
+    </section>
+
+    <section class="panel" data-stop="8">
+      <div class="k">The door</div>
+      <h2>Get early access.</h2>
+      <p>Early access opens with the iOS app. You will hear from the founder directly, not from a marketing funnel.</p>
+      <div class="row"><a class="btn amber" href="#access">Leave your email</a></div>
+    </section>
+
+    <p class="captions" id="captions" aria-live="polite"></p>
+    <button class="hear" id="hear" type="button" aria-label="Hear her"><i></i>Hear her</button>
+
+    <div class="load" id="load"><img src="assets/emblem-192.png" alt="" width="44" height="44"><div class="bar"><i id="bar"></i></div><div class="k" id="loadtext">loading her</div></div>
   </div>
+</div>
 
-  <!-- 0 · arrival -->
-  <section class="caption" data-at="0.03">
-    <div class="k">ANITA</div>
-    <h1>She remembers what every AI forgets.</h1>
-    <p>ANITA is an AI and robotics company building the brain for tomorrow's robots: personal AI with a private memory of you.</p>
-    <div class="row"><button type="button" class="btn" id="tour">Let her show you</button><button type="button" class="btn ghost" data-go="1">Get early access</button></div>
-    <div class="scroll-hint">or scroll to meet her</div>
+<!-- ====================================================== after the film: cream paper -->
+<main class="paper" id="top">
+  <section class="band" aria-label="What runs today">
+    <div><b>5</b><span>layers of memory</span></div>
+    <div><b>3</b><span>thinking modes</span></div>
+    <div><b>Full-duplex</b><span>voice, both ways</span></div>
+    <div><b>1,500+</b><span>tests passing on the machine that runs her</span></div>
   </section>
 
-  <!-- 1 · she talks -->
-  <section class="caption" data-at="0.20">
-    <div class="k">Talk to her</div>
-    <h2>Talk to her like a person.</h2>
-    <p>Full voice, both ways. She listens while she speaks, so you can cut in mid-sentence like you would with anyone. She lives on your home screen, not in a chat window.</p>
-    <div class="proof">Full-duplex voice · a voice you choose · wake word</div>
+  <section class="cards">
+    <article>
+      <div class="k">Talk to her</div>
+      <h3>Talk to her like a person.</h3>
+      <p>Full voice, both ways. She listens while she speaks, so you can cut in mid-sentence like you would with anyone. She lives on your home screen, not in a chat window.</p>
+      <div class="proof">Full-duplex voice · a voice you choose · wake word</div>
+    </article>
+    <article>
+      <div class="k">Her memory of you</div>
+      <h3>Ask her what you were worried about last Tuesday.</h3>
+      <p>Every conversation, person, plan and decision, kept in a five-layer memory and brought back exactly when you need it.</p>
+      <div class="proof">Vector · graph · sessions · procedural · reflection</div>
+    </article>
+    <article>
+      <div class="k">Private by design</div>
+      <h3>Kept on hardware you own.</h3>
+      <p>The memory is yours alone. It stays on your device and on hardware you control, never in a cloud that trains on your life. One switch keeps everything on the phone.</p>
+      <div class="proof">Local-first · runs on your machine · nothing sold, nothing trained on you</div>
+    </article>
+    <article>
+      <div class="k">Why a robotics company built this first</div>
+      <h3>A robot in your home will only be as good as what it knows about you.</h3>
+      <p>We come from robotics. The hard part of a home robot is not the hands, it is knowing the people it lives with. So ANITA learns you now, on the phone you already carry. When the body is ready, she moves in with everything she knows. Same memory, same voice, same ANITA.</p>
+      <div class="proof">ABB · KUKA · FANUC on the floor, before an MSc in Advanced Robotics</div>
+    </article>
   </section>
 
-  <!-- 2 · she remembers -->
-  <section class="caption" data-at="0.40">
-    <div class="k">Her memory of you</div>
-    <h2>Ask her what you were worried about last Tuesday.</h2>
-    <p>Every conversation, person, plan and decision, kept in a five-layer memory and brought back exactly when you need it.</p>
-    <ul class="lines">
-      <li><b>Tue</b><span>You were worried about the investor deck.</span></li>
-      <li><b>Wed</b><span>You uploaded the deck. The revenue numbers were from 2024.</span></li>
-      <li><b>Fri</b><span>Your mum's birthday is on the 15th. No gift yet.</span></li>
-      <li><b>Now</b><span>"What was I stressed about this week?" She tells you all three.</span></li>
-    </ul>
+
+  <section class="plan" id="plan">
+    <div class="k">The plan</div>
+    <h3>One mind. Every device is a window, or a body.</h3>
+    <p>She is built once and lives everywhere you are. What is live is marked live. The rest is the order we build in.</p>
+    <ol class="ladder">
+      <li data-when="live"><b>Phone</b><span>The app. Voice-first, on your home screen.</span><i>live in beta</i></li>
+      <li data-when="live"><b>WhatsApp</b><span>Talk to her there. She sends for you, with your yes.</span><i>live</i></li>
+      <li data-when="next"><b>Laptop and computer</b><span>Her window on your Mac, Windows or Linux. The same conversation continues.</span><i>next</i></li>
+      <li data-when="next"><b>Her own browser</b><span>She books, fills in forms and asks companies things, and shows you before anything goes out.</span><i>next</i></li>
+      <li data-when="next"><b>Your email and calendar</b><span>Connected with permissions you set: once, always, or never.</span><i>next</i></li>
+      <li data-when="next"><b>Watch</b><span>A glance, a word, a pulse when she has something.</span><i>next</i></li>
+      <li data-when="planned"><b>iPad, car, glasses</b><span>Windows that arrive as they arrive. She does not bet on one.</span><i>planned</i></li>
+      <li data-when="planned"><b>A box at home</b><span>One brain for the whole family, each person with a private vault. Works offline. No fees.</span><i>planned</i></li>
+      <li data-when="planned"><b>The body</b><span>A robot in your home that already knows everyone in it.</span><i>planned</i></li>
+    </ol>
+    <p class="rule">One rule holds across all of it: she drafts, you say yes, then it happens.</p>
   </section>
 
-  <!-- 3 · yours -->
-  <section class="caption" data-at="0.54">
-    <div class="k">Private by design</div>
-    <h2>Kept on hardware you own.</h2>
-    <p>The memory is yours alone. It stays on your device and on hardware you control, never in a cloud that trains on your life. One switch keeps everything on the phone.</p>
-    <div class="proof">Local-first · runs on your machine · nothing sold, nothing trained on you</div>
-  </section>
-
-  <!-- 4 · what runs today -->
-  <section class="facts" data-at="0.66" aria-label="What runs today">
-    <div class="k">What runs today</div>
-    <ul>
-      <li><b>5</b><span>layers of memory</span></li>
-      <li><b>3</b><span>thinking modes</span></li>
-      <li><b>Full-duplex</b><span>voice, both ways</span></li>
-      <li><b>1,500+</b><span>tests passing</span></li>
-    </ul>
-    <p class="under">The iOS app is in development. Early access opens with it.</p>
-  </section>
-
-  <!-- 5 · the robot -->
-  <section class="caption" data-at="0.80">
-    <div class="k">Why a robotics company built this first</div>
-    <h2>A robot in your home will only be as good as what it knows about you.</h2>
-    <p>We come from robotics. The hard part of a home robot is not the hands, it is knowing the people it lives with. So ANITA learns you now, on the phone you already carry. When the body is ready, she moves in with everything she knows. Same memory, same voice, same ANITA.</p>
-  </section>
-
-  <!-- 6 · not another chatbot -->
-  <section class="caption" data-at="0.87">
+  <section class="others">
     <div class="k">Not another chatbot</div>
-    <ul class="lines plain">
-      <li><b>Other companions live in someone's cloud.</b><span>ANITA lives with you.</span></li>
-      <li><b>Other assistants start every day from zero.</b><span>ANITA starts from yesterday.</span></li>
-      <li><b>Other AIs are apps.</b><span>ANITA is a brain that will one day have a body.</span></li>
-    </ul>
+    <p><b>Other companions live in someone's cloud.</b> ANITA lives with you.</p>
+    <p><b>Other assistants start every day from zero.</b> ANITA starts from yesterday.</p>
+    <p><b>Other AIs are apps.</b> ANITA is a brain that will one day have a body.</p>
   </section>
 
-  <!-- 7 · built in public -->
-  <section class="caption small" data-at="0.955">
+  <section class="team">
     <div class="k">Built in public</div>
-    <p>Built in public from London and Chennai by ANITA Artificial Neuro Intelligence Technologies Pvt Ltd. Follow the build on <a href="https://www.linkedin.com/company/anita-ai" rel="noopener">LinkedIn</a> and <a href="https://github.com/Dee-Nith" rel="noopener">GitHub</a>.</p>
+    <h3>Built in public from London and Chennai.</h3>
+    <p>We come from robotics. Our founder put ABB and KUKA arms to work on factory floors before an MSc in Advanced Robotics at Queen Mary University of London.</p>
+    <ul>
+      <li><b>Deepak Ananthapadman</b><span>Founder &amp; CEO</span></li>
+      <li><b>Jayakshata</b><span>Founding AI/ML Engineer</span></li>
+    </ul>
+    <p class="follow">Follow the build on <a href="https://www.linkedin.com/company/anita-ai" rel="noopener">LinkedIn</a> and <a href="https://github.com/Dee-Nith" rel="noopener">GitHub</a>.</p>
   </section>
+</main>
 
-  <!-- 8 · early access -->
-  <section class="access" id="access" aria-label="Early access">
+<section class="access" id="access" aria-label="Early access">
+  <div class="inner">
     <div class="k">Early access</div>
     <h2>Get early access.</h2>
     <p>Early access opens with the iOS app. You will hear from the founder directly, not from a marketing funnel.</p>
     <form id="signup" novalidate>
       <label class="sr" for="email">Email</label>
       <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
-      <button type="submit" class="btn">Get early access</button>
+      <button type="submit" class="btn amber">Get early access</button>
     </form>
     <div class="msg" id="msg" aria-live="polite">No spam. Build updates when there is something worth showing. Unsubscribe in one click.</div>
-    <footer>
-      <span>ANITA Artificial Neuro Intelligence Technologies Pvt Ltd, Chennai, India.</span>
-      <span class="links"><a href="https://www.linkedin.com/company/anita-ai" rel="noopener">LinkedIn</a><a href="https://github.com/Dee-Nith" rel="noopener">GitHub</a><a href="mailto:hello@aneeta.ai">hello@aneeta.ai</a></span>
-    </footer>
-  </section>
-</div>
+  </div>
+  <footer>
+    <span>ANITA Artificial Neuro Intelligence Technologies Pvt Ltd, Chennai, India.</span>
+    <span class="links"><a href="https://www.linkedin.com/company/anita-ai" rel="noopener">LinkedIn</a><a href="https://github.com/Dee-Nith" rel="noopener">GitHub</a><a href="mailto:hello@aneeta.ai">hello@aneeta.ai</a><a href="privacy.html">Privacy</a></span>
+  </footer>
+</section>
 
-<div class="hud" id="hud" hidden></div>
-<noscript><div class="noscript"><img src="assets/anita-still.png" alt="ANITA"><p>ANITA — personal AI with a private memory of you. Write to hello@aneeta.ai for early access.</p></div></noscript>
-<script type="module" src="main.js"></script>
+<script src="intro.js" type="module"></script>
+<script src="walk.js" type="module"></script>
 </body>
 </html>

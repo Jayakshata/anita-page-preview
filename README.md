@@ -1,6 +1,13 @@
-# ANITA landing page — preview
+# ANITA — preview for Dee
 
-Unlisted preview of the ANITA landing page for review. Not the live site;
-aneeta.ai is unchanged. Copy and look are unapproved — nothing here is final.
+Unlisted preview of the landing page. Not aneeta.ai, not announced.
 
-Source of truth: `anita-site/tron/` in the private nith-project repo.
+It opens with the arrival film — she is held in the dark with her eyes closed,
+the light finds her, and the camera pulls back until she is standing in her pool
+of light. Then you scroll and walk with her through nine stops.
+
+- `?nointro` skips the opening film
+- `?intro` replays it (it plays once per visit otherwise)
+- press play on **Hear her** for her voice; the captions are always there without sound
+
+Copy and look are still unapproved. Delete this repo after review.
