@@ -1,0 +1,44 @@
+{
+  "_about": "Effect marks: the small glowing drawings that appear around the companion with a reaction (thought bubble, Z z z, sparkles, wiggle lines ...). Style set by Dee's Gemini sheet of 2026-10-02: the same glowing cyan light as the eyes. One source for Blender (make_mark_textures.py draws them, rig_companion.py places them) and for the app and the website (companion.js draws and places them). Each shape is drawn inside a square that runs from -1 to 1 (x to the right, y up) and should stay inside 0.72 so its glow is not cut off. Which marks a clip shows, where and when, is written with the clip in rig_companion.py.",
+  "colour": [96, 232, 255],
+  "strength": 4.0,
+  "size": 256,
+  "glow": [[0.11, 0.16], [0.04, 0.42]],
+
+  "anchors": {
+    "_about": "Points on her body that marks hang from: a bone and how far along it (0 = where it starts, 1 = where it ends), and optionally a step from there in the bone's own directions [to her left, along the bone, to her front], in parts of her height.",
+    "body": ["body", 0.91],
+    "cheek": ["body", 0.90, [0.098, 0, 0.325]],
+    "top": ["curl_1", 0.0],
+    "crown": ["curl_3", 0.0],
+    "tip": ["curl_3", 1.0],
+    "hand_L": ["arm_L", 1.0],
+    "hand_R": ["arm_R", 1.0]
+  },
+
+  "shapes": {
+    "arc":      [{"t": "path", "p": [[-0.22, -0.58], [0.34, 0.0, -0.22, 0.58]], "w": 0.2}],
+    "bubble":   [{"t": "arc", "c": [0, 0], "r": [0.46, 0.46], "a": [0, 360], "w": 0.22}],
+    "cloud":    [{"t": "blob", "circles": [[-0.33, -0.06, 0.25], [-0.12, 0.17, 0.29], [0.2, 0.13, 0.27], [0.4, -0.07, 0.21], [0.12, -0.15, 0.25], [-0.12, -0.17, 0.21]], "w": 0.13}],
+    "ray":      [{"t": "path", "p": [[0, -0.5], [0, 0.5]], "w": 0.24}],
+    "sparkle":  [{"t": "path", "p": [[0, 0.66], [0.09, 0.09, 0.44, 0], [0.09, -0.09, 0, -0.66], [-0.09, -0.09, -0.44, 0], [-0.09, 0.09, 0, 0.66]], "fill": true, "w": 0.05}],
+    "dot":      [{"t": "ellipse", "c": [0, 0], "r": [0.3, 0.3]}],
+    "wiggle":   [{"t": "path", "p": [[0, 0.62], [0.36, 0.465, 0, 0.31], [-0.36, 0.155, 0, 0], [0.36, -0.155, 0, -0.31], [-0.36, -0.465, 0, -0.62]], "w": 0.2}],
+    "note":     [{"t": "ellipse", "c": [-0.2, -0.42], "r": [0.25, 0.18], "turn": 20},
+                 {"t": "path", "p": [[0.02, -0.4], [0.02, 0.56], [0.44, 0.46, 0.36, 0.08]], "w": 0.13}],
+    "notes":    [{"t": "ellipse", "c": [-0.44, -0.44], "r": [0.2, 0.15], "turn": 20},
+                 {"t": "ellipse", "c": [0.26, -0.3], "r": [0.2, 0.15], "turn": 20},
+                 {"t": "path", "p": [[-0.26, -0.42], [-0.26, 0.4], [0.44, 0.54], [0.44, -0.28]], "w": 0.12},
+                 {"t": "path", "p": [[-0.26, 0.3], [0.44, 0.44]], "w": 0.2}],
+    "star":     [{"t": "path", "p": [[0, 0.62], [0.159, 0.218], [0.59, 0.192], [0.257, -0.083], [0.364, -0.502], [0, -0.27], [-0.364, -0.502], [-0.257, -0.083], [-0.59, 0.192], [-0.159, 0.218], [0, 0.62]], "fill": true, "w": 0.1}],
+    "ring_far": [{"t": "arc", "c": [0, 0], "r": [0.66, 0.2], "a": [15, 165], "w": 0.055}],
+    "ring_near": [{"t": "arc", "c": [0, 0], "r": [0.66, 0.2], "a": [195, 345], "w": 0.055}],
+    "heart":    [{"t": "path", "p": [[0, -0.40], [0.36, -0.04], [0, 0.32], [-0.36, -0.04], [0, -0.40]], "fill": true, "w": 0.05},
+                 {"t": "ellipse", "c": [-0.18, 0.14], "r": [0.2546, 0.2546]},
+                 {"t": "ellipse", "c": [0.18, 0.14], "r": [0.2546, 0.2546]}],
+    "tear":     [{"t": "path", "p": [[0, 0.64], [0.44, 0.06, 0.36, -0.26], [0.3, -0.62, 0, -0.62], [-0.3, -0.62, -0.36, -0.26], [-0.44, 0.06, 0, 0.64]], "fill": true, "w": 0.05}],
+    "question": [{"t": "path", "p": [[-0.26, 0.36], [-0.26, 0.66, 0.04, 0.66], [0.34, 0.66, 0.34, 0.38], [0.34, 0.14, 0.04, 0.02], [0.04, -0.2]], "w": 0.2},
+                 {"t": "ellipse", "c": [0.04, -0.54], "r": [0.11, 0.11]}],
+    "z":        [{"t": "path", "p": [[-0.36, 0.46], [0.36, 0.46], [-0.36, -0.46], [0.36, -0.46]], "w": 0.21}]
+  }
+}

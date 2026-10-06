@@ -1,0 +1,866 @@
+{
+  "bed": {
+    "file": "bed.glb",
+    "format": "glb",
+    "bytes": 659728,
+    "triangles": 18745,
+    "source": "https://polyhaven.com/a/GothicBed_01",
+    "license": "CC0 1.0"
+  },
+  "nightstand": {
+    "file": "nightstand.glb",
+    "format": "glb",
+    "bytes": 69768,
+    "triangles": 2002,
+    "source": "https://polyhaven.com/a/ClassicNightstand_01",
+    "license": "CC0 1.0"
+  },
+  "lamp": {
+    "file": "lamp.glb",
+    "format": "glb",
+    "bytes": 738712,
+    "triangles": 24102,
+    "source": "https://polyhaven.com/a/desk_lamp_arm_01",
+    "license": "CC0 1.0"
+  },
+  "sofa": {
+    "file": "sofa.glb",
+    "format": "glb",
+    "bytes": 76836,
+    "triangles": 2728,
+    "source": "https://polyhaven.com/a/sofa_02",
+    "license": "CC0 1.0"
+  },
+  "coffee_table": {
+    "file": "coffee_table.glb",
+    "format": "glb",
+    "bytes": 155972,
+    "triangles": 4504,
+    "source": "https://polyhaven.com/a/modern_coffee_table_01",
+    "license": "CC0 1.0"
+  },
+  "armchair": {
+    "file": "armchair.glb",
+    "format": "glb",
+    "bytes": 155084,
+    "triangles": 5626,
+    "source": "https://polyhaven.com/a/ArmChair_01",
+    "license": "CC0 1.0"
+  },
+  "dining_table": {
+    "file": "dining_table.glb",
+    "format": "glb",
+    "bytes": 32940,
+    "triangles": 1048,
+    "source": "https://polyhaven.com/a/dining_table",
+    "license": "CC0 1.0"
+  },
+  "chair": {
+    "file": "chair.glb",
+    "format": "glb",
+    "bytes": 545680,
+    "triangles": 22013,
+    "source": "https://polyhaven.com/a/dining_chair_02",
+    "license": "CC0 1.0"
+  },
+  "desk": {
+    "file": "desk.glb",
+    "format": "glb",
+    "bytes": 237032,
+    "triangles": 6898,
+    "source": "https://polyhaven.com/a/metal_office_desk",
+    "license": "CC0 1.0"
+  },
+  "office_chair": {
+    "file": "office_chair.glb",
+    "format": "glb",
+    "bytes": 39016,
+    "triangles": 588,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "bookshelf": {
+    "file": "bookshelf.glb",
+    "format": "glb",
+    "bytes": 269112,
+    "triangles": 10106,
+    "source": "https://polyhaven.com/a/wooden_bookshelf_worn",
+    "license": "CC0 1.0"
+  },
+  "floor_lamp": {
+    "file": "floor_lamp.glb",
+    "format": "glb",
+    "bytes": 6600,
+    "triangles": 76,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "plant": {
+    "file": "plant.glb",
+    "format": "glb",
+    "bytes": 245452,
+    "triangles": 8929,
+    "source": "https://polyhaven.com/a/potted_plant_04",
+    "license": "CC0 1.0"
+  },
+  "fridge": {
+    "file": "fridge.glb",
+    "format": "glb",
+    "bytes": 20116,
+    "triangles": 250,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "kettle": {
+    "file": "kettle.glb",
+    "format": "glb",
+    "bytes": 418600,
+    "triangles": 14838,
+    "source": "https://polyhaven.com/a/vintage_electric_kettle",
+    "license": "CC0 1.0"
+  },
+  "stove": {
+    "file": "stove.glb",
+    "format": "glb",
+    "bytes": 480428,
+    "triangles": 13914,
+    "source": "https://polyhaven.com/a/electric_stove",
+    "license": "CC0 1.0"
+  },
+  "door": {
+    "file": "door.glb",
+    "format": "glb",
+    "bytes": 13016,
+    "triangles": 156,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "tv": {
+    "file": "tv.glb",
+    "format": "glb",
+    "bytes": 82796,
+    "triangles": 2310,
+    "source": "https://polyhaven.com/a/television_02",
+    "license": "CC0 1.0"
+  },
+  "car": {
+    "file": "car.glb",
+    "format": "glb",
+    "bytes": 172216,
+    "triangles": 2032,
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0 1.0"
+  },
+  "robot": {
+    "file": "robot.glb",
+    "format": "glb",
+    "bytes": 1066836,
+    "triangles": 213244,
+    "source": "https://science.nasa.gov/3d-resources/robonaut-2/",
+    "license": "NASA media usage guidelines - US government work, generally not copyrighted (public domain in the US)"
+  },
+  "laptop": {
+    "file": "laptop.glb",
+    "format": "glb",
+    "bytes": 512448,
+    "triangles": 14450,
+    "source": "https://polyhaven.com/a/classic_laptop",
+    "license": "CC0 1.0"
+  },
+  "laptop_lowpoly": {
+    "file": "laptop_lowpoly.glb",
+    "format": "glb",
+    "bytes": 5540,
+    "triangles": 68,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "pc": {
+    "file": "pc.glb",
+    "format": "glb",
+    "bytes": 15408,
+    "triangles": 175,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "pc_monitor": {
+    "file": "pc_monitor.glb",
+    "format": "glb",
+    "bytes": 6404,
+    "triangles": 72,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "pc_keyboard": {
+    "file": "pc_keyboard.glb",
+    "format": "glb",
+    "bytes": 3476,
+    "triangles": 32,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "pc_mouse": {
+    "file": "pc_mouse.glb",
+    "format": "glb",
+    "bytes": 5868,
+    "triangles": 71,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "watch": {
+    "file": "watch.glb",
+    "format": "glb",
+    "bytes": 432512,
+    "triangles": 10390,
+    "source": "https://polyhaven.com/a/digital_wrist_watch",
+    "license": "CC0 1.0"
+  },
+  "k_bathroom_sink": {
+    "file": "k_bathroom_sink.glb",
+    "format": "glb",
+    "bytes": 22496,
+    "triangles": 316,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_bathroom_mirror": {
+    "file": "k_bathroom_mirror.glb",
+    "format": "glb",
+    "bytes": 6752,
+    "triangles": 72,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_shower": {
+    "file": "k_shower.glb",
+    "format": "glb",
+    "bytes": 51972,
+    "triangles": 810,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_toilet": {
+    "file": "k_toilet.glb",
+    "format": "glb",
+    "bytes": 18064,
+    "triangles": 230,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_kitchen_sink": {
+    "file": "k_kitchen_sink.glb",
+    "format": "glb",
+    "bytes": 23428,
+    "triangles": 318,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_kitchen_cabinet": {
+    "file": "k_kitchen_cabinet.glb",
+    "format": "glb",
+    "bytes": 10396,
+    "triangles": 114,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_kitchen_upper": {
+    "file": "k_kitchen_upper.glb",
+    "format": "glb",
+    "bytes": 8128,
+    "triangles": 80,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_hood": {
+    "file": "k_hood.glb",
+    "format": "glb",
+    "bytes": 3928,
+    "triangles": 28,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_speaker": {
+    "file": "k_speaker.glb",
+    "format": "glb",
+    "bytes": 15204,
+    "triangles": 220,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_tv": {
+    "file": "k_tv.glb",
+    "format": "glb",
+    "bytes": 6328,
+    "triangles": 72,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_wardrobe": {
+    "file": "k_wardrobe.glb",
+    "format": "glb",
+    "bytes": 22588,
+    "triangles": 296,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_coat_rack": {
+    "file": "k_coat_rack.glb",
+    "format": "glb",
+    "bytes": 13248,
+    "triangles": 190,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_shelf": {
+    "file": "k_shelf.glb",
+    "format": "glb",
+    "bytes": 17980,
+    "triangles": 320,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_shelf_low": {
+    "file": "k_shelf_low.glb",
+    "format": "glb",
+    "bytes": 11480,
+    "triangles": 184,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_bed_double": {
+    "file": "k_bed_double.glb",
+    "format": "glb",
+    "bytes": 23308,
+    "triangles": 264,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_side_table": {
+    "file": "k_side_table.glb",
+    "format": "glb",
+    "bytes": 12148,
+    "triangles": 140,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_sofa": {
+    "file": "k_sofa.glb",
+    "format": "glb",
+    "bytes": 9604,
+    "triangles": 128,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_sofa_long": {
+    "file": "k_sofa_long.glb",
+    "format": "glb",
+    "bytes": 13072,
+    "triangles": 186,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_lounge_chair": {
+    "file": "k_lounge_chair.glb",
+    "format": "glb",
+    "bytes": 9604,
+    "triangles": 128,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_table_coffee": {
+    "file": "k_table_coffee.glb",
+    "format": "glb",
+    "bytes": 8216,
+    "triangles": 124,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_table_round": {
+    "file": "k_table_round.glb",
+    "format": "glb",
+    "bytes": 6404,
+    "triangles": 80,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_table": {
+    "file": "k_table.glb",
+    "format": "glb",
+    "bytes": 8156,
+    "triangles": 120,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_chair_cushion": {
+    "file": "k_chair_cushion.glb",
+    "format": "glb",
+    "bytes": 12544,
+    "triangles": 198,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_desk": {
+    "file": "k_desk.glb",
+    "format": "glb",
+    "bytes": 15000,
+    "triangles": 198,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_chair_desk": {
+    "file": "k_chair_desk.glb",
+    "format": "glb",
+    "bytes": 38968,
+    "triangles": 588,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_screen": {
+    "file": "k_screen.glb",
+    "format": "glb",
+    "bytes": 6360,
+    "triangles": 72,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_keyboard": {
+    "file": "k_keyboard.glb",
+    "format": "glb",
+    "bytes": 3436,
+    "triangles": 32,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_laptop": {
+    "file": "k_laptop.glb",
+    "format": "glb",
+    "bytes": 5500,
+    "triangles": 68,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_plant": {
+    "file": "k_plant.glb",
+    "format": "glb",
+    "bytes": 7536,
+    "triangles": 60,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_plant_small": {
+    "file": "k_plant_small.glb",
+    "format": "glb",
+    "bytes": 12956,
+    "triangles": 158,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_rug": {
+    "file": "k_rug.glb",
+    "format": "glb",
+    "bytes": 3148,
+    "triangles": 28,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_rug_round": {
+    "file": "k_rug_round.glb",
+    "format": "glb",
+    "bytes": 10120,
+    "triangles": 188,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_lamp_floor": {
+    "file": "k_lamp_floor.glb",
+    "format": "glb",
+    "bytes": 5584,
+    "triangles": 60,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_washer": {
+    "file": "k_washer.glb",
+    "format": "glb",
+    "bytes": 48052,
+    "triangles": 720,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_bear": {
+    "file": "k_bear.glb",
+    "format": "glb",
+    "bytes": 11840,
+    "triangles": 134,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_fridge_large": {
+    "file": "k_fridge_large.glb",
+    "format": "glb",
+    "bytes": 30580,
+    "triangles": 436,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_microwave": {
+    "file": "k_microwave.glb",
+    "format": "glb",
+    "bytes": 11196,
+    "triangles": 152,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_coffee_machine": {
+    "file": "k_coffee_machine.glb",
+    "format": "glb",
+    "bytes": 13292,
+    "triangles": 166,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_bench": {
+    "file": "k_bench.glb",
+    "format": "glb",
+    "bytes": 10716,
+    "triangles": 170,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_stool": {
+    "file": "k_stool.glb",
+    "format": "glb",
+    "bytes": 11772,
+    "triangles": 176,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_trashcan": {
+    "file": "k_trashcan.glb",
+    "format": "glb",
+    "bytes": 6412,
+    "triangles": 68,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_box": {
+    "file": "k_box.glb",
+    "format": "glb",
+    "bytes": 5360,
+    "triangles": 60,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "k_pillow": {
+    "file": "k_pillow.glb",
+    "format": "glb",
+    "bytes": 5004,
+    "triangles": 50,
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0 1.0"
+  },
+  "f_egg": {
+    "file": "f_egg.glb",
+    "format": "glb",
+    "bytes": 5748,
+    "triangles": 44,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_chicken": {
+    "file": "f_chicken.glb",
+    "format": "glb",
+    "bytes": 12624,
+    "triangles": 116,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_broccoli": {
+    "file": "f_broccoli.glb",
+    "format": "glb",
+    "bytes": 20160,
+    "triangles": 220,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_lettuce": {
+    "file": "f_lettuce.glb",
+    "format": "glb",
+    "bytes": 15068,
+    "triangles": 140,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_tomato": {
+    "file": "f_tomato.glb",
+    "format": "glb",
+    "bytes": 13800,
+    "triangles": 132,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_carrot": {
+    "file": "f_carrot.glb",
+    "format": "glb",
+    "bytes": 16076,
+    "triangles": 148,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_bread": {
+    "file": "f_bread.glb",
+    "format": "glb",
+    "bytes": 9184,
+    "triangles": 116,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_cheese": {
+    "file": "f_cheese.glb",
+    "format": "glb",
+    "bytes": 60572,
+    "triangles": 576,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_pan": {
+    "file": "f_pan.glb",
+    "format": "glb",
+    "bytes": 18928,
+    "triangles": 200,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_pot": {
+    "file": "f_pot.glb",
+    "format": "glb",
+    "bytes": 18612,
+    "triangles": 228,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_plate": {
+    "file": "f_plate.glb",
+    "format": "glb",
+    "bytes": 8196,
+    "triangles": 140,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_bowl": {
+    "file": "f_bowl.glb",
+    "format": "glb",
+    "bytes": 6056,
+    "triangles": 84,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_cutting_board": {
+    "file": "f_cutting_board.glb",
+    "format": "glb",
+    "bytes": 10372,
+    "triangles": 120,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_knife": {
+    "file": "f_knife.glb",
+    "format": "glb",
+    "bytes": 5096,
+    "triangles": 39,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_cake_birthday": {
+    "file": "f_cake_birthday.glb",
+    "format": "glb",
+    "bytes": 115000,
+    "triangles": 1146,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_cupcake": {
+    "file": "f_cupcake.glb",
+    "format": "glb",
+    "bytes": 22420,
+    "triangles": 204,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_bottle": {
+    "file": "f_bottle.glb",
+    "format": "glb",
+    "bytes": 11036,
+    "triangles": 100,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_glass": {
+    "file": "f_glass.glb",
+    "format": "glb",
+    "bytes": 3928,
+    "triangles": 44,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_banana": {
+    "file": "f_banana.glb",
+    "format": "glb",
+    "bytes": 12056,
+    "triangles": 104,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "f_apple": {
+    "file": "f_apple.glb",
+    "format": "glb",
+    "bytes": 14084,
+    "triangles": 136,
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0 1.0"
+  },
+  "n_tree_round": {
+    "file": "n_tree_round.glb",
+    "format": "glb",
+    "bytes": 9388,
+    "triangles": 114,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_tree_oak": {
+    "file": "n_tree_oak.glb",
+    "format": "glb",
+    "bytes": 14604,
+    "triangles": 196,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_tree_pine": {
+    "file": "n_tree_pine.glb",
+    "format": "glb",
+    "bytes": 17176,
+    "triangles": 230,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_tree_tall": {
+    "file": "n_tree_tall.glb",
+    "format": "glb",
+    "bytes": 6960,
+    "triangles": 72,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_bush": {
+    "file": "n_bush.glb",
+    "format": "glb",
+    "bytes": 6396,
+    "triangles": 60,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_flowers": {
+    "file": "n_flowers.glb",
+    "format": "glb",
+    "bytes": 7064,
+    "triangles": 76,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_rock": {
+    "file": "n_rock.glb",
+    "format": "glb",
+    "bytes": 7948,
+    "triangles": 80,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_grass": {
+    "file": "n_grass.glb",
+    "format": "glb",
+    "bytes": 11456,
+    "triangles": 132,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_fence": {
+    "file": "n_fence.glb",
+    "format": "glb",
+    "bytes": 5672,
+    "triangles": 64,
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0 1.0"
+  },
+  "n_lamp_post": {
+    "file": "n_lamp_post.glb",
+    "format": "glb",
+    "bytes": 17356,
+    "triangles": 172,
+    "source": "https://kenney.nl/assets/holiday-kit",
+    "license": "CC0 1.0"
+  },
+  "h_gift": {
+    "file": "h_gift.glb",
+    "format": "glb",
+    "bytes": 18660,
+    "triangles": 238,
+    "source": "https://kenney.nl/assets/holiday-kit",
+    "license": "CC0 1.0"
+  },
+  "h_gift_2": {
+    "file": "h_gift_2.glb",
+    "format": "glb",
+    "bytes": 20980,
+    "triangles": 238,
+    "source": "https://kenney.nl/assets/holiday-kit",
+    "license": "CC0 1.0"
+  },
+  "h_gift_3": {
+    "file": "h_gift_3.glb",
+    "format": "glb",
+    "bytes": 18676,
+    "triangles": 238,
+    "source": "https://kenney.nl/assets/holiday-kit",
+    "license": "CC0 1.0"
+  },
+  "h_garland": {
+    "file": "h_garland.glb",
+    "format": "glb",
+    "bytes": 77884,
+    "triangles": 760,
+    "source": "https://kenney.nl/assets/holiday-kit",
+    "license": "CC0 1.0"
+  },
+  "car_suv": {
+    "file": "car_suv.glb",
+    "format": "glb",
+    "bytes": 207252,
+    "triangles": 2474,
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0 1.0"
+  },
+  "car_hatch": {
+    "file": "car_hatch.glb",
+    "format": "glb",
+    "bytes": 197496,
+    "triangles": 2088,
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0 1.0"
+  },
+  "car_van": {
+    "file": "car_van.glb",
+    "format": "glb",
+    "bytes": 175356,
+    "triangles": 2082,
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0 1.0"
+  },
+  "car_taxi": {
+    "file": "car_taxi.glb",
+    "format": "glb",
+    "bytes": 175300,
+    "triangles": 2072,
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0 1.0"
+  }
+}
